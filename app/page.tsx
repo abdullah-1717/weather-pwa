@@ -29,7 +29,7 @@ export default function Home() {
 
   async function fetchData(cityName: string) {
     try {
-      const response = await fetch(`http://weather-pwa-next-js.vercel.app/api/weather?address=${cityName}&apikey=${API_KEY}`);
+      const response = await fetch(`https://weather-pwa-next-js.vercel.app/api/weather?address=${cityName}&apikey=${API_KEY}`);
       const jsonData = (await response.json()).data;
       setWeatherData(jsonData);
       setCity('');
