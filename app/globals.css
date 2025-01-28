@@ -1,0 +1,40 @@
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+input {
+  color:white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #86adf7;
+    --foreground: #ededed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    padding: 10px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #86adf7;
+    --foreground: #ededed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    padding: 10px;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
