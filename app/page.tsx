@@ -23,8 +23,29 @@ interface WeatherData {
 }
 
 export default function Home() {
+
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [city, setCity] = useState('Lahore');
+
+  const sendNotification = (title: string, message: string) => {
+    if ('Notification' in window) {
+      if (Notification.permission === 'granted') {
+        new Notification(title, {
+          body: message,
+          icon: 'weather.png',
+        });
+      } else if (Notification.permission !== 'denied') {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            new Notification(title, {
+              body: message,
+              icon: 'weather.png', 
+            });
+          }
+        });
+      }
+    }
+  };
   
 
   async function fetchData(cityName: string) {
@@ -122,7 +143,10 @@ export default function Home() {
           width: '100%',
           maxWidth: '300px', 
         }}
-        onClick={() => fetchData(city)}
+        onClick={() => {
+          fetchData(city);
+          sendNotification('Weather Update', `Fetching weather data for ${city}`); 
+        }}
       >
         Search
       </Button>
