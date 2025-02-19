@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <div
     style={{
-      background: '#0080ff',
+      background: '#0195a8',
       maxWidth: '500px',
       width: '100%',
       borderRadius: '12px',
@@ -122,7 +122,7 @@ export default function Home() {
         onChange={(e) => setCity(e.target.value)}
         InputProps={{
           style: {
-            backgroundColor: '#66b2ff',
+            backgroundColor: '#025964',
             color: '#000000',
             fontWeight: 'bold',
             fontSize: '18px',
@@ -137,7 +137,7 @@ export default function Home() {
         style={{
           fontSize: '20px',
           fontWeight: 'bold',
-          backgroundColor: '#000099',
+          backgroundColor: '#025964',
           margin: '14px',
           borderRadius: '12px',
           width: '100%',
@@ -181,7 +181,7 @@ export default function Home() {
     >
       <div
         style={{
-          backgroundColor: '#000099',
+          backgroundColor: '#025964',
           padding: '20px',
           borderRadius: '6px',
           textAlign: 'center', 
@@ -195,7 +195,7 @@ export default function Home() {
       margin: '20px auto', 
       padding: '20px',
       borderRadius: '12px',
-      backgroundColor: '#0044cc',
+      backgroundColor: '#025964',
       boxSizing: 'border-box', 
     }}>
       <div style={{
@@ -242,4 +242,6 @@ export default function Home() {
       </div>
    );
 };
+
+
 
